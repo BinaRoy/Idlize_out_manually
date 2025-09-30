@@ -4,41 +4,6 @@ import ohos.macro_memoize.*
 import ohos.incremental_runtime.*
 import ohos.peernodes.*
 
-public interface ColumnInterfaceInterfaces {
-}
-public open class ColumnInterface <: ColumnInterfaceInterfaces {
-    init() {
-    }
-}
-public interface ColumnAttributeInterfaces <: CommonMethodInterfaces {
-}
-public open class ColumnAttribute <: ColumnAttributeInterfaces {
-    init() {
-    }
-}
-public open class LayoutSafeAreaType {
-    public static var SYSTEM: LayoutSafeAreaType = LayoutSafeAreaType(0)
-    public var value: Int32
-    init(arg0: Int32) {
-        value = arg0
-    }
-}
-public open class LayoutSafeAreaEdge {
-    public static var TOP: LayoutSafeAreaEdge = LayoutSafeAreaEdge(0)
-    public static var BOTTOM: LayoutSafeAreaEdge = LayoutSafeAreaEdge(1)
-    public var value: Int32
-    init(arg0: Int32) {
-        value = arg0
-    }
-}
-public open class TitleHeight {
-    public static var MAIN_ONLY: TitleHeight = TitleHeight(0)
-    public static var MAIN_WITH_SUB: TitleHeight = TitleHeight(1)
-    public var value: Int32
-    init(arg0: Int32) {
-        value = arg0
-    }
-}
 public open class ArkColumnComponent <: ArkCommonMethodComponent & ColumnAttributeInterfaces {
     public open func getPeer(): ArkColumnPeer {
         if (let Some(peer) <- this.peer) {
